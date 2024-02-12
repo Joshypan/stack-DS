@@ -94,14 +94,7 @@ void DynStack::displayStack() const {
 	} else {
 		std::cout << "\nDynStack contains: \n";
 		 while (temp != nullptr) {
-			// Replace period with space
-			std::string displayValue = temp->value;
-			std::size_t found = displayValue.find(".");
-			if (found != std::string::npos)
-			{
-				displayValue = displayValue.replace(found, 1, " ");
-			}
-			std::cout << displayValue << "\n";
+			std::cout << temp->value << "\n";
 			temp = temp->next;
 		}
 	}
